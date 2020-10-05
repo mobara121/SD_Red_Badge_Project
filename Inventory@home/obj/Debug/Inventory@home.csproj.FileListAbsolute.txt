@@ -1,0 +1,2 @@
+C:\ElevenFiftyProjects\SD\Projects\Inventory@home\Inventory@home\obj\Debug\Inventory@home.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\SD\Projects\Inventory@home\Inventory@home\obj\Debug\Inventory@home.csproj.CoreCompileInputs.cache

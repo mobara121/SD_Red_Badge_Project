@@ -1,0 +1,57 @@
+﻿@model IEnumerable<Inventory.Models.InventoryListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Inventory</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qty)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StockedDate)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ItemName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Location)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Qty)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StockedDate)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new {  id=item.ItemId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ItemId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ItemId })
+        </td>
+    </tr>
+}
+
+</table>
