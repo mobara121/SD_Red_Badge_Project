@@ -20,3 +20,7 @@ C:\ElevenFiftyProjects\SD\Projects\Inventory@home\Inventory.Data\obj\Debug\Inven
 C:\ElevenFiftyProjects\SD\Projects\Inventory@home\Inventory.Data\obj\Debug\Inventory.Data.Migrations.SecondMigration.resources
 C:\ElevenFiftyProjects\SD\Projects\Inventory@home\Inventory.Data\obj\Debug\Inventory.Data.Migrations.thirdMigration.resources
 C:\ElevenFiftyProjects\SD\Projects\Inventory@home\Inventory.Data\obj\Debug\Inventory.Data.Migrations.lastMigration.resources
+C:\ElevenFiftyProjects\SD\Projects\Inventory@home\Inventory.Data\obj\Debug\Inventory.Data.Migrations.errormessageadded.resources
+C:\ElevenFiftyProjects\SD\Projects\Inventory@home\Inventory.Data\obj\Debug\Inventory.Data.Migrations.addmigratintry.resources
+C:\ElevenFiftyProjects\SD\Projects\Inventory@home\Inventory.Data\obj\Debug\Inventory.Data.Migrations.ownerIdunrequired.resources
+C:\ElevenFiftyProjects\SD\Projects\Inventory@home\Inventory.Data\obj\Debug\Inventory.Data.Migrations._try.resources

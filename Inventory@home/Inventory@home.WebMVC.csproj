@@ -170,6 +170,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ItemController.cs" />
+    <Compile Include="Controllers\ItemOutController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MemberController.cs" />
     <Compile Include="Global.asax.cs">
@@ -244,6 +245,14 @@
     <Content Include="Views\Item\Index.cshtml" />
     <Content Include="Views\Member\Index.cshtml" />
     <Content Include="Views\Member\Create.cshtml" />
+    <Content Include="Views\Member\Details.cshtml" />
+    <Content Include="Views\Member\Edit.cshtml" />
+    <Content Include="Views\Member\Delete.cshtml" />
+    <Content Include="Views\ItemOut\Create.cshtml" />
+    <Content Include="Views\ItemOut\Delete.cshtml" />
+    <Content Include="Views\ItemOut\Details.cshtml" />
+    <Content Include="Views\ItemOut\Edit.cshtml" />
+    <Content Include="Views\ItemOut\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

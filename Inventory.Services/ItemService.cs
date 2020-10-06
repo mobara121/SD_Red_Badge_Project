@@ -40,6 +40,11 @@ namespace Inventory.Services
             }
         }
 
+        public object GetMembers()
+        {
+            throw new NotImplementedException();
+        }
+
         public IEnumerable<InventoryListItem> GetItems()
         {
             using (var ctx = new ApplicationDbContext())
@@ -117,43 +122,5 @@ namespace Inventory.Services
             }
         }
 
-        public bool CreateMember(MemberCreate model)
-        {
-            var entity =
-                new Member()
-                {
-                    OwnerId = _userId,
-                    MemberName = model.MemberName,
-                    RegisteredDate = DateTimeOffset.Now
-                };
-
-            using(var ctx = new ApplicationDbContext())
-            {
-                ctx.Members.Add(entity);
-                return ctx.SaveChanges() == 1;
-            }
-        }
-
-        public IEnumerable<MemberList> GetMembers()
-        {
-            using (var ctx = new ApplicationDbContext())
-            {
-                var query =
-                    ctx
-                        .Members
-                        .Where(e => e.OwnerId == _userId)
-                        .Select(
-                            e =>
-                                new MemberList
-                                {
-                                    MemberId = e.Id,
-                                    MemberName = e.MemberName,
-                                    RegisteredDate = e.RegisteredDate
-                                }
-                        );
-
-                return query.ToArray();
-            }
-        }
     }
 }

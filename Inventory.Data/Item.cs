@@ -28,6 +28,23 @@ namespace Inventory.Data
         public int Qty { get; set; }
 
         [Required]
+        public bool IsInStock
+        {
+            get
+            {
+                if (Qty > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+
+        }
+
+        [Required]
         [Display(Name = "Stocked Date")]
         public DateTimeOffset StockedDate { get; set; }
         

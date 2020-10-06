@@ -9,16 +9,16 @@ namespace Inventory.Models
 {
     public class ItemCreate
     {
-        [Required]
+        [Required(ErrorMessage="Item Name is required")]
         [Display(Name = "Item Name")]
         public string ItemName { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Please input [Location Name]/[Shelf No.]. (ex. pantory/3)")]
         [MinLength(2, ErrorMessage = "Please input [Location Name]/[Shelf No.]. (ex. pantory/3)")]
         [Display(Name = "Location")]
         public string Location { get; set; }
 
-        [Required]
+        [Required(ErrorMessage = "Item number is required")]
         [Display(Name = "QTY")]
         public int Qty { get; set; }
     }

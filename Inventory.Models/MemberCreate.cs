@@ -9,7 +9,7 @@ namespace Inventory.Models
 {
     public class MemberCreate
     {
-        [Required]
+        [Required(ErrorMessage = "Member Name is required.")]
         [Display(Name = "Member Name")]
         public string  MemberName { get; set; }
     }

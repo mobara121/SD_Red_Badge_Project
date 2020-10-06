@@ -13,18 +13,22 @@ namespace Inventory.Data
         [Key]
         public int Id { get; set; }
 
-        [Required]
         public Guid OwnerId { get; set; }
 
         [ForeignKey(nameof(Member))]
-        public int MemberName { get; set; }
+        public int MemberId { get; set; }
         public virtual Member Member { get; set; }
 
         [ForeignKey(nameof(Item))]
-        public int ItemName { get; set; }
+        public int ItemId { get; set; }
         public virtual Item Item { get; set; }
 
+        [Required]
+        [Display(Name = "# to be taken")]
+        public int Qty { get; set; }
 
+        [Display(Name = "Record Date")]
+        public DateTimeOffset RecordDate { get; set; }
 
     }
 }

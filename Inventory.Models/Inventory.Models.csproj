@@ -59,6 +59,8 @@
     <Compile Include="ItemDetail.cs" />
     <Compile Include="ItemEdit.cs" />
     <Compile Include="MemberCreate.cs" />
+    <Compile Include="MemberDetail.cs" />
+    <Compile Include="MemberEdit.cs" />
     <Compile Include="MemberList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

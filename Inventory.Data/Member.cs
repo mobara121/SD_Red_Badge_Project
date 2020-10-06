@@ -23,5 +23,7 @@ namespace Inventory.Data
         [Required]
         [Display(Name = "Registered Date")]
         public DateTimeOffset RegisteredDate { get; set; }
+
+        public virtual ICollection<ItemOut> MemberUsedItem { get; set; } = new List<ItemOut>();
     }
 }

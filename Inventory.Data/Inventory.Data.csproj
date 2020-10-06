@@ -78,6 +78,22 @@
     <Compile Include="Migrations\202010050141254_lastMigration.Designer.cs">
       <DependentUpon>202010050141254_lastMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010051608551_errormessage-added.cs" />
+    <Compile Include="Migrations\202010051608551_errormessage-added.Designer.cs">
+      <DependentUpon>202010051608551_errormessage-added.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010051752572_add-migratin try.cs" />
+    <Compile Include="Migrations\202010051752572_add-migratin try.Designer.cs">
+      <DependentUpon>202010051752572_add-migratin try.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010051840014_ownerIdunrequired.cs" />
+    <Compile Include="Migrations\202010051840014_ownerIdunrequired.Designer.cs">
+      <DependentUpon>202010051840014_ownerIdunrequired.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010052103585_try.cs" />
+    <Compile Include="Migrations\202010052103585_try.Designer.cs">
+      <DependentUpon>202010052103585_try.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -100,6 +116,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010050141254_lastMigration.resx">
       <DependentUpon>202010050141254_lastMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010051608551_errormessage-added.resx">
+      <DependentUpon>202010051608551_errormessage-added.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010051752572_add-migratin try.resx">
+      <DependentUpon>202010051752572_add-migratin try.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010051840014_ownerIdunrequired.resx">
+      <DependentUpon>202010051840014_ownerIdunrequired.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010052103585_try.resx">
+      <DependentUpon>202010052103585_try.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
