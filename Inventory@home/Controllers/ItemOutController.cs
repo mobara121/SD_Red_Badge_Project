@@ -14,15 +14,15 @@ namespace Inventory_home.Controllers
     public class ItemOutController : Controller
     {
         private ApplicationDbContext db = new ApplicationDbContext();
-
-        // GET: ItemOut
+        private readonly Guid _userId;
+        // GET: ItemOuts1
         public ActionResult Index()
         {
             var itemsOut = db.ItemsOut.Include(i => i.Item).Include(i => i.Member);
             return View(itemsOut.ToList());
         }
 
-        // GET: ItemOut/Details/5
+        // GET: ItemOuts1/Details/5
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,15 +37,16 @@ namespace Inventory_home.Controllers
             return View(itemOut);
         }
 
-        // GET: ItemOut/Create
+        // GET: ItemOuts1/Create
         public ActionResult Create()
         {
             ViewBag.ItemId = new SelectList(db.Items, "Id", "ItemName");
             ViewBag.MemberId = new SelectList(db.Members, "Id", "MemberName");
+
             return View();
         }
 
-        // POST: ItemOut/Create
+        // POST: ItemOuts1/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -54,7 +55,23 @@ namespace Inventory_home.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.ItemsOut.Add(itemOut);
+                var entity =
+                    new ItemOut()
+                    {
+                        ItemId = itemOut.ItemId,
+                        Item = itemOut.Item,
+                        MemberId = itemOut.MemberId,
+                        Member = itemOut.Member,
+                        Qty = itemOut.Qty,
+                        RecordDate = DateTimeOffset.Now
+                    };
+
+                //using (var ctx = new ApplicationDbContext())
+                //{
+                    //ctx.ItemsOut.Add(record);
+                //}
+                db.ItemsOut.Add(entity);
+                //db.ItemsOut.Add(itemOut);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -64,7 +81,7 @@ namespace Inventory_home.Controllers
             return View(itemOut);
         }
 
-        // GET: ItemOut/Edit/5
+        // GET: ItemOuts1/Edit/5
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -81,7 +98,7 @@ namespace Inventory_home.Controllers
             return View(itemOut);
         }
 
-        // POST: ItemOut/Edit/5
+        // POST: ItemOuts1/Edit/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -90,6 +107,7 @@ namespace Inventory_home.Controllers
         {
             if (ModelState.IsValid)
             {
+                itemOut.RecordDate = DateTimeOffset.Now;
                 db.Entry(itemOut).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
@@ -99,7 +117,7 @@ namespace Inventory_home.Controllers
             return View(itemOut);
         }
 
-        // GET: ItemOut/Delete/5
+        // GET: ItemOuts1/Delete/5
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -114,7 +132,7 @@ namespace Inventory_home.Controllers
             return View(itemOut);
         }
 
-        // POST: ItemOut/Delete/5
+        // POST: ItemOuts1/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

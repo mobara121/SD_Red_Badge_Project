@@ -16,15 +16,17 @@ namespace Inventory.Data
         public Guid OwnerId { get; set; }
 
         [ForeignKey(nameof(Member))]
+        [Display(Name = "Member ID")]
         public int MemberId { get; set; }
         public virtual Member Member { get; set; }
 
         [ForeignKey(nameof(Item))]
+        [Display(Name = "Item ID")]
         public int ItemId { get; set; }
         public virtual Item Item { get; set; }
 
         [Required]
-        [Display(Name = "# to be taken")]
+        [Display(Name = "Takeout Number")]
         public int Qty { get; set; }
 
         [Display(Name = "Record Date")]

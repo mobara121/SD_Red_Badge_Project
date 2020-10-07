@@ -53,6 +53,10 @@ namespace Inventory_home.Data
         }
     }
 
+    public class ItemOutListItem
+    {
+    }
+
     public class IdentityUserLoginConfiguration : EntityTypeConfiguration<IdentityUserLogin>
     {
         public IdentityUserLoginConfiguration()
