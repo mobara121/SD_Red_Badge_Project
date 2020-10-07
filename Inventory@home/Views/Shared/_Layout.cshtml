@@ -28,8 +28,8 @@
                     @if (User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Member", "Index", "Member")</li>
-                        <li>@Html.ActionLink("Inventory", "", "Item")</li>
                     }
+                    <li>@Html.ActionLink("Inventory", "", "Item")</li>
 
                 </ul>
                 @Html.Partial("_LoginPartial")

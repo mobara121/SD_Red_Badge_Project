@@ -13,11 +13,16 @@ namespace Inventory.Models
 
         //public Guid OwnerId { get; set; }
 
+        public string Category { get; set; }
+
         [Display(Name = "Item Name")]
         public string ItemName { get; set; }
 
         [Display(Name = "Location")]
         public string Location { get; set; }
+
+        [Display(Name = "Shelf No.")]
+        public int Shelf { get; set; }
 
         [Display(Name = "Current QTY")]
         public int Qty { get; set; }

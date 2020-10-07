@@ -25,9 +25,10 @@ namespace Inventory.Services
                 new Item()
                 {
                     OwnerId = _userId,
-                    
+                    Category = model.Category,
                     ItemName = model.ItemName,
                     Location = model.Location,
+                    Shelf = model.Shelf,
                     Qty = model.Qty,
                     StockedDate = DateTimeOffset.Now
 
@@ -57,11 +58,14 @@ namespace Inventory.Services
                             e =>
                             new InventoryListItem
                             {
+                                Category = e.Category,
                                 ItemId = e.Id,
                                 ItemName = e.ItemName,
                                 Location = e.Location,
+                                Shelf = e.Shelf,
                                 Qty = e.Qty,
-                                StockedDate = e.StockedDate
+                                StockedDate = e.StockedDate,
+                                ModifiedDate = e.ModifiedDate,
                             }
                          );
                 return query.ToArray();
@@ -79,12 +83,14 @@ namespace Inventory.Services
                 return
                         new ItemDetail
                         {
+                            Category = entity.Category,
                             ItemId = entity.Id,
                             ItemName = entity.ItemName,
                             Location = entity.Location,
+                            Shelf = entity.Shelf,
                             Qty = entity.Qty,
                             StockedDate = entity.StockedDate,
-
+                            ModifiedDate = entity.ModifiedDate
                         };
             }
         }
@@ -98,8 +104,10 @@ namespace Inventory.Services
                     .Items
                     .Single(e => e.Id == model.ItemId && e.OwnerId == _userId);
 
+                entity.Category = model.Category;
                 entity.ItemName = model.ItemName;
                 entity.Location = model.Location;
+                entity.Shelf = model.Shelf;
                 entity.Qty = model.Qty;
                 entity.ModifiedDate = DateTimeOffset.UtcNow;
 

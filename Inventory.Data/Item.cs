@@ -16,12 +16,19 @@ namespace Inventory.Data
         public Guid OwnerId { get; set; }
 
         [Required]
+        public string Category { get; set; }
+
+        [Required]
         [Display(Name = "Item Name")]
         public string ItemName { get; set; }
 
         [Required]
         [Display(Name = "Location")]
         public string Location { get; set; }
+
+        [Required]
+        [Display(Name = "Shelf No.")]
+        public int Shelf { get; set; }
 
         [Required]
         [Display(Name = "Current QTY")]

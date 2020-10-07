@@ -85,7 +85,7 @@ namespace Inventory.Services
                     .Single(e => e.Id == model.MemberId && e.OwnerId == _userId);
 
                 entity.MemberName = model.MemberName;
-                entity.RegisteredDate = DateTimeOffset.UtcNow;
+                entity.RegisteredDate = DateTimeOffset.Now;
 
                 return ctx.SaveChanges() == 1;
             }

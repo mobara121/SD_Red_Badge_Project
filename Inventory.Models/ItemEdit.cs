@@ -11,11 +11,18 @@ namespace Inventory.Models
     {
         public int ItemId { get; set; }
 
+        [Required]
+        public string Category { get; set; }
+
         [Required(ErrorMessage = "Item Name is required")]
         public string ItemName { get; set; }
 
         [Required(ErrorMessage = "Please input[Location Name] /[Shelf No.]. (ex.pantory / 3)")]
         public string Location { get; set; }
+
+        [Required]
+        [Display(Name = "Shelf No.")]
+        public int Shelf { get; set; }
 
         [Required(ErrorMessage = "Item Number is required")]
         public int Qty { get; set; }

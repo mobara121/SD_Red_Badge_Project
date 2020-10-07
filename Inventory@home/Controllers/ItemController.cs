@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace Inventory_home.Controllers
 {
-    [Authorize]
+    //[Authorize]
     public class ItemController : Controller
     {
        // private readonly ItemService _service = new ItemService();
@@ -68,7 +68,9 @@ namespace Inventory_home.Controllers
                 new ItemEdit
                 {
                     ItemId = detail.ItemId,
+                    Category = detail.Category,
                     ItemName = detail.ItemName,
+                    Shelf = detail.Shelf,
                     Qty = detail.Qty,
                     Location = detail.Location,
                 };

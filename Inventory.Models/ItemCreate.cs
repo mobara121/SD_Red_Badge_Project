@@ -9,14 +9,20 @@ namespace Inventory.Models
 {
     public class ItemCreate
     {
+        [Required(ErrorMessage = "Category is required")]
+        public string Category { get; set; }
+
         [Required(ErrorMessage="Item Name is required")]
         [Display(Name = "Item Name")]
         public string ItemName { get; set; }
 
-        [Required(ErrorMessage = "Please input [Location Name]/[Shelf No.]. (ex. pantory/3)")]
-        [MinLength(2, ErrorMessage = "Please input [Location Name]/[Shelf No.]. (ex. pantory/3)")]
+        [Required]
         [Display(Name = "Location")]
         public string Location { get; set; }
+
+        [Required(ErrorMessage = "Shelf No. is required")]
+        [Display(Name = "Shelf No.")]
+        public int Shelf { get; set; }
 
         [Required(ErrorMessage = "Item number is required")]
         [Display(Name = "QTY")]
