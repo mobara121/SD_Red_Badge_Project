@@ -3,36 +3,43 @@
 }
 
     <div class="jumbotron">
-        <div>
             <div class="title">
                 <span>Inventory@home</span>
                 <p class="lead">This App helps you to keep a well-organized inventory and reduce your food waste to a minimum.</p>
                 <span><button class="btn btn-primary btn-lg">@Html.ActionLink("Want item out?", "Create", "ItemOut")</button></span>
-            </div>              
-        </div>        
+            </div>                   
         <img class="homepic" src="~/Image/Kitchen-pantry-designs.png" alt="#" />
-        
-
     </div>
 
 <div class="row">
     <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
+        <h2>Keep Your Snacks Limited</h2>
+        <div class="pic">
+            <img src="~/Image/open-shelving.png" alt="#" />
+        </div>
+        <p class="text">
+            All too often, the pantry closet is stuffed with an assortment of snacking options. It can get messy very easily. To avoid clutter, keep your snack categories simple, non-perishable, and healthy!
         </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+
+        <p><button class="btn btn-default">@Html.ActionLink("Inventory ", "", "Item") &raquo;</button></p>
     </div>
     <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+        <h2>Keep Baking Essentials Together</h2>
+        <div class="pic">
+            <img src="~/Image/gh-pantry-organization-1583340711.png" alt="#" />
+        </div>
+        <p class="text">
+            Organizing by intended use keeps it easy for your to track all of the items you need to replace when you need to replace them. Never be without
+            a grocery item again! Add all of the baking items to "Inventory@home" .
+        </p>
+        <p><button class="btn btn-default">@Html.ActionLink("Inventory ", "", "Item") &raquo;</button></p>
     </div>
     <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        <h2>Opened Jar of Sauce in Fridge?</h2>
+        <div class="pic">
+            <img src="~/Image/gh-fridge-organization-ideas-1583342871.png" alt="#" />
+        </div>
+        <p class="text">Having an organized fridge not only makes you feel great every time you open the door, but it saves time when you're trying to get a meal put together. And while it can seem like a daunting task, just use this App and you'll have the job done in no time.</p>
+        <p><button class="btn btn-default">@Html.ActionLink("Inventory ", "", "Item") &raquo;</button></p>
     </div>
 </div>

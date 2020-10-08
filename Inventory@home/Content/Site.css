@@ -1,13 +1,15 @@
 ﻿body {
     padding-top: 50px;
-    padding-bottom: 20px;
+    padding-bottom: 0;
     background-color: #FAF9F9;
+    
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    width: 100%;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -29,6 +31,9 @@ textarea {
     background-color: #89B0AE;
     border-color: #89B0AE;
     color: #555B6E;
+}
+.navbar-brand {
+    font-family: 'Bradley Hand ITC';
 }
 
     .navbar-inverse .navbar-brand {
@@ -55,6 +60,7 @@ textarea {
     padding: 30px;
     text-align:center;
     position: relative;
+
 }
 @media(min-width:360px){
     .homepic {
@@ -63,9 +69,14 @@ textarea {
 }
 .title {
     position: absolute;
-    height: 60%;
+    width: 50%;
+    height: 38%;    
+    margin: 200px auto;
+    padding:15px;
+    left:0;
+    right: 0;
+    display: grid;
     background-color: #555B6E;
-    margin: 150px auto;
     font-family: 'Bradley Hand ITC';
     color: #fff;
     font-weight: 900;
@@ -76,42 +87,27 @@ textarea {
 @media(min-width:360px) {
     .title {
         width: 70%;
-        height: 50%;
-        margin: 120px 23px 0 37px;
-        padding: 10px 20px 0 20px;
+        margin-top: 120px;
     }
-        .title span{
-            font-size: 25px;
-        }
-        .title p {
-            font-size: 15px;
-        }
-}
-@media(min-width:414px) {
-    .title {
-        width: 70%;
-        height: 45%;
-        margin: 120px 20px 0 42px;
-        padding: 20px 20px 0 20px;
-    }
-
         .title span {
-            font-size: 28px;
+            font-size: 30px;
         }
-
         .title p {
-            font-size: 15px;
+            font-size: 12px;
         }
-} 
+    .btn-primary {
+        padding: 3px 8px;
+        font-size: 15px;
+    }
+
+}
 @media(min-width:768px) {
     .title {
-        max-width: 45%;
-        max-height: 40%;
-        margin: 250px 300px 150px 200px;
-        padding: 50px 70px 50px 20px;   
+        width: 60%;
+        margin-top: 200px;
     }
         .title span {
-            font-size: 40px;           
+            font-size: 50px;
         }
         .title p {
             font-size: 20px;
@@ -119,34 +115,29 @@ textarea {
 }
 @media(min-width:1203px) {
     .title {
-        max-width: 40%;
-        max-height: 40%;
-        margin: 250px 300px 150px 280px;
-        padding: 45px 60px 50px 20px;
+        width: 30%;
     }
-
         .title span {
-            font-size: 40px;
+            font-size: 50px;
         }
-
         .title p {
-            font-size: 20px;
+            font-size: 18px;
         }
 }
 @media(min-width:1440px) {
     .title {
-        max-width: 37%;
-        max-height: 40%;
-        margin: 250px 310px 150px 300px;
-        padding: 40px 50px 50px 20px;
+        width: 30%;
+        height: 40%;
+        margin-top: 250px
     }
         .title span {
-            font-size: 45px;
+            font-size: 55px;
         }
         .title p {
             font-size: 20px;
         }
 }
+
 .btn-primary {
     background-color: #F6A9A2;
     border-color: #F6A9A2;
@@ -160,4 +151,65 @@ textarea {
         background-color: #FFD6BA;
         border-color: #FFD6BA;
     }
+.pic img{
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+}
+.btn-default {
+    background-color: #F6A9A2;
+    border-color: #F6A9A2;
+}
+    .btn-default a {
+        color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    }
+.text{
+    height: 100px;
+    margin-top: 10px;
+}
+footer {
+    background-color: #89B0AE;
+    border-color: #89B0AE;
+    color: #555B6E;
+    text-align:center;
+    height: 50px;
+    padding: 15px 0;
+}
+/*Menu Page*/
+.edit-btn {
+    background-color: #BEE3DB;
+    border-color: #BEE3DB;
+    border-radius: 5px;
+}
+    .edit-btn a {
+        color: #555B6E
+    }
+    .edit-btn a:hover {
+        text-decoration: none;
+        color: #555B6E
+    }
 
+.details-btn {
+    background-color: #FFD6BA;
+    border-color: #FFD6BA;
+    border-radius: 5px;
+}
+.details-btn a {
+    color: #555B6E
+}
+.detailst-btn a:hover {
+    text-decoration: none;
+}
+.delete-btn {
+    background-color: #F6A9A2;
+    border-color: #F6A9A2;
+    border-radius: 5px;
+}
+.delete-btn a {
+    color: #555B6E
+}
+.delete-btn a:hover {
+    text-decoration: none;
+}

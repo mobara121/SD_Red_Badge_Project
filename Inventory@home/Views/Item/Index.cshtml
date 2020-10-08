@@ -27,9 +27,6 @@
             @Html.DisplayNameFor(model => model.ItemId)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Category)
-        </th>
-        <th>
             @Html.DisplayNameFor(model => model.ItemName)
         </th>
         <th>
@@ -37,12 +34,6 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Qty)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.StockedDate)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.ModifiedDate)
         </th>
         <th></th>
     </tr>
@@ -54,9 +45,6 @@
                 @Html.DisplayFor(modelItem => item.ItemId)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Category)
-            </td>
-            <td>
                 @Html.DisplayFor(modelItem => item.ItemName)
             </td>
             <td>
@@ -66,16 +54,21 @@
                 @Html.DisplayFor(modelItem => item.Qty)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.StockedDate)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ModifiedDate)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.ItemId }) |
-                @Html.ActionLink("Details", "Details", new { id = item.ItemId }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.ItemId })
-
+                <span>
+                    <button class="edit-btn">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ItemId })
+                    </button>
+                </span>
+                <span>
+                    <button class="details-btn">
+                        @Html.ActionLink("Details", "Details", new { id = item.ItemId })
+                    </button>
+                </span>
+                <span>
+                    <button class="delete-btn">
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ItemId })
+                    </button>
+                </span>
             </td>
         </tr>
     }

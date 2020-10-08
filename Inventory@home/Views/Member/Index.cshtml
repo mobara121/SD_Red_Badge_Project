@@ -45,9 +45,21 @@
             @Html.DisplayFor(modelItem => item.RegisteredDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MemberId }) |
-            @Html.ActionLink("Details", "Details", new { id = item.MemberId }) |
-            @Html.ActionLink("Delete", "Delete", new { id = item.MemberId })
+            <span>
+                <button class="edit-btn">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MemberId })
+                </button>
+            </span>
+            <span>
+                <button class="details-btn">
+                    @Html.ActionLink("Details", "Details", new { id = item.MemberId })
+                </button>
+            </span>
+            <span>
+                <button class="delete-btn">
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MemberId })
+                </button>
+            </span>
         </td>
     </tr>
 }

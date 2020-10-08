@@ -190,6 +190,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Image\edit.png" />
+    <Content Include="Image\gh-fridge-organization-ideas-1583342871.png" />
+    <Content Include="Image\gh-pantry-organization-1583340711.png" />
     <Content Include="Image\Kitchen-pantry-designs.png" />
     <Content Include="Image\open-shelving.png" />
     <Content Include="Scripts\bootstrap.js" />
