@@ -1,6 +1,7 @@
 ﻿body {
     padding-top: 50px;
     padding-bottom: 20px;
+    background-color: #FAF9F9;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -22,3 +23,99 @@ select,
 textarea {
     max-width: 280px;
 }
+
+/*NavBar*/
+.navbar-inverse {
+    background-color: #89B0AE;
+    border-color: #89B0AE;
+    color: #555B6E;
+}
+
+    .navbar-inverse .navbar-brand {
+        color: #555B6E;
+        font-weight: 700;
+    }
+    .navbar-inverse .navbar-nav li a{
+        color: #555B6E;
+        font-weight: 700;
+    }
+    .navbar-inverse .navbar-toggle {
+        background-color: transparent;
+        border-color: transparent;
+    }
+        .navbar-inverse .navbar-toggle:hover {
+            background-color: #FAF9F9;
+        }
+        .navbar-inverse .navbar-toggle .icon-bar {
+            background-color: #555B6E;
+        }
+/*Home*/
+.jumbotron{
+    margin: 30px auto;
+    padding: 30px;
+    text-align:center;
+    position: relative;
+}
+@media(min-width:360px){
+    .homepic {
+        max-width: 90%;
+    }
+}
+.title {
+    position: absolute;
+    height: 60%;
+    background-color: #89B0AE;
+    margin: 150px auto;
+    font-family: 'Bradley Hand ITC';
+    color: #fff;
+    font-weight: 900;
+    opacity: 0.9;
+    border-radius: 6px;
+    text-align: left;
+}
+@media(min-width:360px) {
+    .title {
+        width: 70%;
+        height: 50%;
+        margin: 120px 23px 0 37px;
+        padding: 10px 20px 0 20px;
+    }
+        .title span{
+            font-size: 25px;
+        }
+        .title p {
+            font-size: 15px;
+        }
+} 
+@media(min-width:768px) {
+    .title {
+        max-width: 45%;
+        max-height: 40%;
+        margin: 250px 300px 150px 200px;
+        padding: 50px 70px 50px 20px;   
+    }
+        .title span {
+            font-size: 40px;           
+        }
+        .title p {
+            font-size: 20px;
+        }
+}
+@media(min-width:1440px) {
+    .title {
+        max-width: 37%;
+        max-height: 40%;
+        margin: 250px 310px 150px 300px;
+        padding: 40px 50px 50px 20px;
+    }
+
+        .title span {
+            font-size: 45px;
+        }
+
+        .title p {
+            font-size: 20px;
+        }
+}
+
+

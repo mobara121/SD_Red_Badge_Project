@@ -50,6 +50,7 @@ namespace Inventory.Services
         {
             using (var ctx = new ApplicationDbContext())
             {
+
                 var query =
                     ctx
                         .Items
