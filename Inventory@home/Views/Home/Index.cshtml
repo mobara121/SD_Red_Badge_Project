@@ -3,12 +3,15 @@
 }
 
     <div class="jumbotron">
-        <div class="title">
-            <span>Inventory@home</span>
-            <p class="lead">This App helps you to keep a well-organized inventory and reduce your food waste to a minimum.</p>
-            <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-        </div>
+        <div>
+            <div class="title">
+                <span>Inventory@home</span>
+                <p class="lead">This App helps you to keep a well-organized inventory and reduce your food waste to a minimum.</p>
+                <span><button class="btn btn-primary btn-lg">@Html.ActionLink("Want item out?", "Create", "ItemOut")</button></span>
+            </div>              
+        </div>        
         <img class="homepic" src="~/Image/Kitchen-pantry-designs.png" alt="#" />
+        
 
     </div>
 

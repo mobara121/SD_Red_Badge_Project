@@ -64,7 +64,7 @@ textarea {
 .title {
     position: absolute;
     height: 60%;
-    background-color: #89B0AE;
+    background-color: #555B6E;
     margin: 150px auto;
     font-family: 'Bradley Hand ITC';
     color: #fff;
@@ -86,6 +86,22 @@ textarea {
         .title p {
             font-size: 15px;
         }
+}
+@media(min-width:414px) {
+    .title {
+        width: 70%;
+        height: 45%;
+        margin: 120px 20px 0 42px;
+        padding: 20px 20px 0 20px;
+    }
+
+        .title span {
+            font-size: 28px;
+        }
+
+        .title p {
+            font-size: 15px;
+        }
 } 
 @media(min-width:768px) {
     .title {
@@ -101,6 +117,22 @@ textarea {
             font-size: 20px;
         }
 }
+@media(min-width:1203px) {
+    .title {
+        max-width: 40%;
+        max-height: 40%;
+        margin: 250px 300px 150px 280px;
+        padding: 45px 60px 50px 20px;
+    }
+
+        .title span {
+            font-size: 40px;
+        }
+
+        .title p {
+            font-size: 20px;
+        }
+}
 @media(min-width:1440px) {
     .title {
         max-width: 37%;
@@ -108,14 +140,24 @@ textarea {
         margin: 250px 310px 150px 300px;
         padding: 40px 50px 50px 20px;
     }
-
         .title span {
             font-size: 45px;
         }
-
         .title p {
             font-size: 20px;
         }
 }
-
+.btn-primary {
+    background-color: #F6A9A2;
+    border-color: #F6A9A2;
+}
+    .btn-primary a {
+        color: #000;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration:none;
+    }
+    .btn-primary:hover {
+        background-color: #FFD6BA;
+        border-color: #FFD6BA;
+    }
 
