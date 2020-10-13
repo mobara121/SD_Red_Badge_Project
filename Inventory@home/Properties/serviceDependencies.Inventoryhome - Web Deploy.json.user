@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2020-10-12T18:34:50.4537076Z"
+    }
+  },
+  "parameters": {
+    "resourceGroup": {
+      "Type": "resourceGroup",
+      "Value": "InventoryhomeWebMVC"
+    },
+    "subscriptionId": {
+      "Type": "subscription",
+      "Value": "88e164b2-77f8-4d2e-a9aa-7563fab79de7"
+    }
+  }
+}

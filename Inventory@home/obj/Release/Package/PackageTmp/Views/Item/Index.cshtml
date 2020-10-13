@@ -1,0 +1,76 @@
+﻿@model IEnumerable<Inventory.Models.InventoryListItem>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Inventory</h2>
+
+<p>
+    @Html.ActionLink("Create New Item", "Create")
+</p>
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+<div class="alert alert-success fade in" role="alert">
+
+    <button type="button" class="close" data-dismiss="alert">
+        <span>&times;</span>
+    </button>
+    @TempData["SaveResult"]
+</div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ItemName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Location)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Qty)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ItemName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Location)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Qty)
+            </td>
+            <td>
+                <span>
+                    <button class="edit-btn">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.ItemId })
+                    </button>
+                </span>
+                <span>
+                    <button class="details-btn">
+                        @Html.ActionLink("Details", "Details", new { id = item.ItemId })
+                    </button>
+                </span>
+                <span>
+                    <button class="delete-btn">
+                        @Html.ActionLink("Delete", "Delete", new { id = item.ItemId })
+                    </button>
+                </span>
+            </td>
+        </tr>
+    }
+
+</table>

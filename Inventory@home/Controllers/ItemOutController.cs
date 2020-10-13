@@ -8,6 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using Inventory.Data;
 using Inventory_home.Data;
+using Inventory.Models;
 
 namespace Inventory_home.Controllers
 {
@@ -37,9 +38,10 @@ namespace Inventory_home.Controllers
             return View(itemOut);
         }
 
-        // GET: ItemOuts1/Create
-        public ActionResult Create()
+        // GET: ItemOuts/Create
+        public ActionResult Create(int? id, int? itemId)
         {
+            ViewBag.Qty = new SelectList(db.Items, "Id", "Qty");
             ViewBag.ItemId = new SelectList(db.Items, "Id", "ItemName");
             ViewBag.MemberId = new SelectList(db.Members, "Id", "MemberName");
 
@@ -76,7 +78,7 @@ namespace Inventory_home.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.ItemId = new SelectList(db.Items, "Id", "ItemName", itemOut.ItemId);
+            ViewBag.ItemId = new SelectList(db.Items, "Id", "ItemName", "Qty", itemOut.ItemId);
             ViewBag.MemberId = new SelectList(db.Members, "Id", "MemberName", itemOut.MemberId);
             return View(itemOut);
         }
@@ -93,7 +95,7 @@ namespace Inventory_home.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.ItemId = new SelectList(db.Items, "Id", "ItemName", itemOut.ItemId);
+            ViewBag.ItemId = new SelectList(db.Items, "Id", "ItemName", "Qty", itemOut.ItemId);
             ViewBag.MemberId = new SelectList(db.Members, "Id", "MemberName", itemOut.MemberId);
             return View(itemOut);
         }
@@ -112,7 +114,7 @@ namespace Inventory_home.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.ItemId = new SelectList(db.Items, "Id", "ItemName", itemOut.ItemId);
+            ViewBag.ItemId = new SelectList(db.Items, "Id", "ItemName", "Qty", itemOut.ItemId);
             ViewBag.MemberId = new SelectList(db.Members, "Id", "MemberName", itemOut.MemberId);
             return View(itemOut);
         }

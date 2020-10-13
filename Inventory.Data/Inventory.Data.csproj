@@ -102,6 +102,10 @@
     <Compile Include="Migrations\202010071420364_ItemOutModified.Designer.cs">
       <DependentUpon>202010071420364_ItemOutModified.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010090323544_ItemICollectionAdded.cs" />
+    <Compile Include="Migrations\202010090323544_ItemICollectionAdded.Designer.cs">
+      <DependentUpon>202010090323544_ItemICollectionAdded.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -142,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010071420364_ItemOutModified.resx">
       <DependentUpon>202010071420364_ItemOutModified.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010090323544_ItemICollectionAdded.resx">
+      <DependentUpon>202010090323544_ItemICollectionAdded.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

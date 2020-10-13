@@ -32,5 +32,7 @@ namespace Inventory.Data
         [Display(Name = "Record Date")]
         public DateTimeOffset RecordDate { get; set; }
 
+        public virtual ICollection<Item> Items { get; set; } = new List<Item>();
+
     }
 }

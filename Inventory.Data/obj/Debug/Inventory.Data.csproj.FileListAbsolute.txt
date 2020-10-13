@@ -78,3 +78,4 @@ C:\ElevenFiftyProjects\SD\Projects\SD_Red_Badge_Project\Inventory.Data\obj\Debug
 C:\ElevenFiftyProjects\SD\Projects\SD_Red_Badge_Project\Inventory.Data\obj\Debug\Inventory.Data.dll
 C:\ElevenFiftyProjects\SD\Projects\SD_Red_Badge_Project\Inventory.Data\obj\Debug\Inventory.Data.pdb
 C:\ElevenFiftyProjects\SD\Projects\SD_Red_Badge_Project\Inventory.Data\obj\Debug\Inventory.Data.Migrations.ItemOutModified.resources
+C:\ElevenFiftyProjects\SD\Projects\SD_Red_Badge_Project\Inventory.Data\obj\Debug\Inventory.Data.Migrations.ItemICollectionAdded.resources
