@@ -41,6 +41,7 @@ namespace Inventory_home.Controllers
         // GET: ItemOuts/Create
         public ActionResult Create(int? id, int? itemId)
         {
+            
             ViewBag.Qty = new SelectList(db.Items, "Id", "Qty");
             ViewBag.ItemId = new SelectList(db.Items, "Id", "ItemName");
             ViewBag.MemberId = new SelectList(db.Members, "Id", "MemberName");
@@ -153,5 +154,23 @@ namespace Inventory_home.Controllers
             }
             base.Dispose(disposing);
         }
+        public ItemDetail GetItemById(int ItemId)
+        {
+            using (var ctx = new ApplicationDbContext())
+            {
+                var entity =
+                    ctx
+                        .Items
+                        .Single(e => e.Id == ItemId);
+                return
+                        new ItemDetail
+                        {
+                            ItemId = entity.Id,
+                            ItemName = entity.ItemName,
+                            Qty = entity.Qty,
+                        };
+            }
+        }
+
     }
 }
